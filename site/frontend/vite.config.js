@@ -12,8 +12,8 @@ export default defineConfig({
         "name":"Beehive Corporation",
         "short_name":"Beehive",
         "display": "standalone",
-        "background_color": "#071952",
-        "theme_color": "#071952",
+        "background_color": "#00203F",
+        "theme_color": "#00203F",
         "icons":[
           {
             src: "Business/Beehive/favicon_io/android-chrome-512x512.png",
