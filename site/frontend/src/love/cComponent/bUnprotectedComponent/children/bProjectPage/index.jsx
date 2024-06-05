@@ -4,6 +4,7 @@ import React, { Suspense, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
 import parse from 'html-react-parser';
+import ImageSliderComponent from './component/aImageSliderComponent';
 
 
 const ProjectPgeComponent = ({ Redux, ReduxUltimate }) => {
@@ -43,6 +44,12 @@ const ProjectPgeComponent = ({ Redux, ReduxUltimate }) => {
           <img className="object-cover object-center rounded" alt="hero" src={Redux.state.ReceivedObject?.Retrieve?.aImage?.url || "https://dummyimage.com/720x600"} />
         </div>
       </div>
+
+      {Redux.state.ReceivedObject?.Retrieve?.dGalleryImages?.length > 0 &&
+        <div className="container mx-auto flex px-5 pt-5 pb-5 flex-col items-center">
+          <ImageSliderComponent Redux={Redux} />
+        </div>
+      }
 
       {Redux.state.ReceivedObject?.Retrieve?.aDetail && 
         <div className="container mx-auto flex px-5 pt-5 pb-24 md:flex-row flex-col items-center">
